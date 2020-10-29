@@ -1,0 +1,204 @@
+%-------------------------
+% Simple Resume in LaTex
+% Author : Paul Kelly
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItemTitle}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    #1 \vspace{-4pt}
+  }
+}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{2pt}
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+	\textbf{#1} & #2 \\
+	\textit{\small#3}  & \textit{\small#4} \\
+    \end{tabular*} \vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItemTitle{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\projectItem}[2]{
+        \vspace{-15pt} \textbf{#1} & \vspace{-15pt} 
+            \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt,parsep=0pt]
+                #2 
+            \end{itemize} \\
+}
+
+\newcommand{\headerbox}[5]{%
+    \noindent\parbox{0.333\textwidth}{#1\hfill}\parbox{0.333\textwidth}{\hfil{\LARGE #2}\hfil}\parbox{0.333\textwidth}{\hfill #3}
+    \noindent\parbox{0.5\textwidth}{#4\hfill}\parbox{0.5\textwidth}{\hfill #5}
+%    \noindent\parbox{0.5\textwidth}{#6\hfill}\parbox{0.5\textwidth}{\hfill #7}
+    \vspace{-15pt}
+}
+
+%-------------------------------------------
+%%%%%% DOCUMENT STARTS HERE  %%%%%%%%%%%%%%%
+
+
+\begin{document}
+%  
+%----------HEADING-----------------
+\headerbox{750 E Marshall St, Apt 306}{Paul Kelly}{pjk2563@rit.edu}
+{West Chester, PA, 19380}{(484) 949-943}
+%{one}{two}
+
+%-----------OBJECTIVE-----------------
+\section{Objective}
+\qquad To further develop computer engineering skills and gain professinal experience by working in a co-op position in the summer of 2021 from May to August.
+
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+    \resumeSubheading
+      {Rochester Institute of Technology}{Rochester, NY}
+      {Bachelor of Science in Computer Engineering}{Expected Graduation: May 2022}
+  \resumeSubHeadingListStart
+      	\resumeItemTitle{GPA}{3.71}
+	\resumeItemTitle{Courses}{}
+	\begin{tabular*}{\textwidth}{l @{\extracolsep{2cm}}l}
+		Digital System Design I, II	            &	Computer Science I, II \\
+		Intro to Embedded Systems  	            &	Computer Architecture  \\
+        Digital Signal Processing               &   Applied Programming in C \\
+	\end{tabular*}
+
+  \resumeSubHeadingListEnd
+
+
+%--------PROGRAMMING SKILLS------------
+\section{Technical Skills}
+      	\small \textbf{Languages}: C, Python, ARM Assembly, VHDL, C\#, Java, Visual Basic, Smali \\
+        \vspace{2pt}
+      	\small \textbf{Software}: Keil, Xilinx Vivado, Altium, LTSPICE, MATLAB, Linux, Vim \\
+        \vspace{2pt}
+	\small \textbf{Hardware}: FPGA, Raspberry Pi, ARM Cortex M0, Teensy, Oscilloscope, Digital Multimeter, Signal Generator, Spectrum Analyzer, VNA/PNA, Solder Iron \\
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+
+    \resumeSubheading
+      {Saab Defense and Security}{Syracuse, NY}
+      {Electrical Engineer Intern}{May 2019 - Dec 2019}
+
+    \resumeSubHeadingListStart
+      \resumeItem{Verified VHDL modules by generating files of known good inputs and outputs with Python, then writing a VHDL testbench to simulate the module with the test data}
+      \resumeItem{Removed uncertainties in board redesign by creating and running test processes on potential components} 
+      \resumeItem{Reduced test times by automatically generating mixer intermodulation tables through instrumentation of test equipment with Python and the NI VISA API}
+    \resumeSubHeadingListEnd
+
+    \resumeSubheading
+      {Schlosser Steel Inc.}{Hatfield, PA}
+      {Computer Technician Intern}{May 2017 - Aug 2018}
+      \resumeSubHeadingListStart
+        \resumeItem{Greatly reduced the time required for accounting to record work hours by automating the timesheet logging system} 
+        \resumeItem{Augmented Revit CAD design through plugins and complex element models} 
+        \resumeItem{Improved sales estimates by writing a program that generated shop fabrication statistics}
+    \resumeSubHeadingListEnd
+      
+
+
+%-----------PROJECTS-----------------
+% this is a table with a bulleted list; be sure to include \item for each line
+\section{Projects}
+    \begin{tabular}{p{0.25\linewidth} p{0.75\linewidth}}
+        \vspace{10pt} % required for the first item
+        \projectItem{RIT Formula SAE}{
+                \vspace{10pt} % required for the first item
+                \item Designed a PCB for use in a custom battery management system on the electric car
+                \item Made wireless telemetry possible through an Xbee network transmitting serial messages to a Raspberry Pi running an internet access point with a webserver
+                \item Designed the dashboard PCB to hold a teensy microntroller that managed a TFT screen driver
+        }
+        \projectItem{Boosted Android}{
+                \item Enabled wireless and USB gadget drivers by pulling LineageOS 16.1 source tree and modifying kernel code
+                \item Ported Hijacker source code to work with custom driver access
+                \item Added custom functionality to apps by reverse engineering compiled apks without source code
+        }
+        \projectItem{MIPS Processor Model}{
+                \item Designed the instruction fetch, instruction decode, execute, memory access, and write back stages of the MIPS processor in VHDL
+        }
+        \hline
+	\end{tabular}
+    
+%---------ACTIVITIES/INTERESTS-------
+%\section{Interests and Activities}
+%\qquad Computer Security, Rally Racing, Camping, Hiking, Fishing
+
+
+%------------------------------------
+
+%--------------GLIDER----------------
+\begin{center}
+
+    \begin{picture}(15,15)(0,0) % define size here
+
+        \multiput(0,0)(0,5){4}{\line(1,0){15}} % size/3, size
+        \multiput(0,0)(5,0){4}{\line(0,1){15}} % size/3, size
+        \put(2.5,2.5){\circle*{4}} % (size/6, size/6) size/3.75
+        \put(7.5,2.5){\circle*{4}} % (size/2, size/6) size/3.75
+        \put(12.5,2.5){\circle*{4}} % (size/1.2, size/6) size/3.75
+        \put(12.5,7.5){\circle*{4}} % (size/1.2, size/2) size/3.75
+        \put(7.5,12.5){\circle*{4}} % (size/2, size/1.2) size/3.75
+
+    \end{picture}
+
+\end{center}
+%------------------------------------
+
+\end{document}
