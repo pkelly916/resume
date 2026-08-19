@@ -74,10 +74,10 @@
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 \newcommand{\projectItem}[2]{
-        \vspace{-15pt} \textbf{#1} & \vspace{-15pt} 
-            \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt,parsep=0pt]
-                #2 
-            \end{itemize} \\
+    \vspace{-15pt} \textbf{#1} & \vspace{-15pt} 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt,parsep=0pt]
+        #2 
+    \end{itemize} \\[0pt] \\
 }
 
 \newcommand{\headerbox}[5]{%
@@ -100,7 +100,7 @@
 
 %-----------OBJECTIVE-----------------
 \section{Objective}
-\qquad To continue research and increase my experience in the embedded cybersecurity industry
+\qquad To continue research and increase my experience in the silicon cybersecurity industry
 
 
 
@@ -109,24 +109,15 @@
     \resumeSubheading
       {Rochester Institute of Technology}{Rochester, NY}
       {Bachelor of Science in Computer Engineering}{Graduation: May 2022}
-  \resumeSubHeadingListStart
-      	\resumeItemTitle{GPA}{3.71}
-	\resumeItemTitle{Courses}{}
-	\begin{tabular*}{\textwidth}{l @{\extracolsep{2cm}}l l}
-        Digital System Design I, II	            &	Computer Science I, II  & Digital Signal Processing \\
-        Intro to Embedded Systems  	            &	Computer Architecture  & Applied Programming in C\\
-	\end{tabular*}
-
-  \resumeSubHeadingListEnd
 
 
 %--------PROGRAMMING SKILLS------------
 \section{Technical Skills}
-      	\small \textbf{Languages}: C/C++, Rust, Python, ARM and x86 Assembly, VHDL, C\#, Java, Rust, Golang \\
+      	\small \textbf{Languages}: C/C++, Rust, Python, ARM and x86 Assembly, VHDL, C\#, Java/Smali, Golang \\
         \vspace{2pt}
       	\small \textbf{Software}: Binary Ninja, Bash, Burp Suite, Windows, Linux, Vim \\
         \vspace{2pt}
-	\small \textbf{Technologies}: FPGA, ARM, ESP32, Digital Multimeter, SDR, Bluetooth and BLE, 802.1x, 3G/4G/5G Cellular, Signal Analyzer, Solder Iron \\
+	\small \textbf{Technologies}: SEM/FIB, FPGA, ESP32, SDR, Bluetooth and BLE, 802.1x, 3G/4G/5G Cellular, Signal Analyzer \\
 
 
 %-----------EXPERIENCE-----------------
@@ -137,9 +128,14 @@
       {Senior Security Consultant}{June 2022 - Current}
 
     \resumeSubHeadingListStart
-      \resumeItem{Improved customer product lines by performing embedded analysis tests to identify security vulnerabilities}
-      \resumeItem{Leveraged engineering experience to perform security assessments in automotive, medical, and energy industries} 
-      \resumeItem{Conducted internal research to explore under-tested technologies to improve the overall security posture of the tech world}
+      \resumeItem{Silicon - Perform decapping, delayering, and netlist extractions on integrated circuits to identify vulnerabilities or stolen IP}
+      \resumeItem{Automotive - Total vehicle assessments to identify weaknesses in inter-module communications, gateway routing, or general packet handling}
+      \resumeItem{Medical - Security assessments spanning the entire industry of new-age medical equipment including MRI machines, Ultrasound scanners, X-rays, and surgical robots}
+      \resumeItem{Cellular - Utilize SDR to run 3G/4G/5G base stations in the field to assess security posture from rogue base stations. }
+      \resumeItem{Reverse Engineering - Aided by experience with broad range of binary file formats and ISAs, both standard and custom}
+      \resumeItem{Threat Modeling - Performed threat modeling of embedded/automotive systems using STRIDE and attack-surface analysis, identifying trust-boundary violations, exploitable attack paths, and security controls across firmware, diagnostic interfaces, and network protocols.
+}
+      \resumeItem{Exploit Development - Python and C programs to take advantage of stack overflows, format string bugs, object deserialization, and more}
     \resumeSubHeadingListEnd
 
     \resumeSubheading
@@ -147,9 +143,7 @@
       {Electrical Engineer Intern}{May 2019 - Dec 2019}
 
     \resumeSubHeadingListStart
-      \resumeItem{Verified VHDL modules by generating files of known good inputs and outputs with Python, then writing a VHDL testbench to simulate the module with the test data}
-      \resumeItem{Removed uncertainties in board redesign by creating and running test processes on potential components} 
-      \resumeItem{Reduced test times by automatically generating mixer intermodulation tables through instrumentation of test equipment with Python and the NI VISA API}
+      \resumeItem{Ran validation processes for RF hardware including writing VHDL test benches, MATLAB algorithm confirmation scripts, and instrumented test equipment to generate mixer intermodulation tables and analyze harmonics.}
     \resumeSubHeadingListEnd
 
 
@@ -158,19 +152,22 @@
 \section{Projects}
     \begin{tabular}{p{0.25\linewidth} p{0.75\linewidth}}
         \vspace{10pt} % required for the first item
-        \projectItem{RIT Formula SAE}{
-                \vspace{10pt} % required for the first item
-                \item Designed a PCB for use in a custom battery management system on the electric car
-                \item Made wireless telemetry possible through an Xbee network transmitting serial messages to a Raspberry Pi running an internet access point with a webserver
-                \item Designed the dashboard PCB to hold a teensy microntroller that managed a TFT screen driver
+        \projectItem{Silicon ROM Extraction}{
+            \vspace{8pt} % required for the first item
+        \item Decapped, delayered (through polishing and ion beam milling), and imaged region of interest to rebuild bit mask ROM into byte code that can be reverse engineered through traditional means)
         }
-        \projectItem{Boosted Android}{
-                \item Enabled wireless and USB gadget drivers by pulling LineageOS 16.1 source tree and modifying kernel code
-                \item Ported Hijacker source code to work with custom driver access
-                \item Added custom functionality to apps by reverse engineering compiled apks without source code
+        \vspace{3pt} 
+        \projectItem{Silicon Counterfeits}{
+            \item Decapped, delayered, and imaged silicon chips to extract netlists and identify stolen logic blocks from copyrighted designs
         }
+        \vspace{3pt} 
         \projectItem{MIPS Processor Model}{
-                \item Designed the instruction fetch, instruction decode, execute, memory access, and write back stages of the MIPS processor in VHDL
+            \item Designed the instruction fetch, instruction decode, execute, memory access, and write back stages of the MIPS processor in VHDL
+        }
+        \vspace{3pt} 
+        \projectItem{Links}{
+            \item Github: https://github.com/pkelly916/
+            \item Website: http://pauljkelly.net
         }
         \hline
 	\end{tabular}
