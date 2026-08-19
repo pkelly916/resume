@@ -4,7 +4,7 @@ A single-page, one-column resume for engineers, forked from the original work do
 
 ### Preview
 
-![Resume Screenshot](/resume_preview.png)
+![Resume Screenshot](/resume_preview.png) 
 
 ### License
 
